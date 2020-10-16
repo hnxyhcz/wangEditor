@@ -59,17 +59,17 @@ class UploadFile {
         if (type === '音频') {
             editor.cmd.do(
                 'insertHTML',
-                `<audio src="${src}" style=${style} controls="controls"/><p><br></p>`
+                `<p><audio src="${src}" style=${style} controls="controls" /></p>`
             )
         } else if (type === '视频') {
             editor.cmd.do(
                 'insertHTML',
-                `<video src="${src}" style=${style} controls="controls"/><p><br></p>`
+                `<p><video src="${src}" style=${style} controls="controls" /></p>`
             )
         } else {
             editor.cmd.do(
                 'insertHTML',
-                `<iframe src="${src}" style="${style};height:${height}" frameborder="0"/><p><br></p>`
+                `<p><iframe src="${src}" style="${style};height:${height}" frameborder="0" /></p>`
             )
         }
 
