@@ -9,6 +9,7 @@ import styleConfig from './style'
 import pasteConfig from './paste'
 import cmdConfig from './cmd'
 import imageConfig, { UploadImageHooksType } from './image'
+import attachConfig, { UploadFileHooksType } from './attach'
 import textConfig from './text'
 import langConfig from './lang'
 
@@ -58,6 +59,25 @@ export type ConfigType = {
     customUploadImg: Function | null
     customAlert: Function | null
 
+    // 上传文件参数
+    showUploadPDF: boolean
+    showUploadAudio: boolean
+    showUploadVideo: boolean
+    uploadFileServer: string
+    uploadFileMaxSize: number
+    uploadFileMaxLength: number
+    uploadFileParams: DicType
+    uploadFileParamsWithUrl: boolean
+    uploadFileHeaders: DicType
+    uploadFileHooks: UploadFileHooksType
+    uploadFileTimeout: number
+    insertFileCallback: Function
+    // 如果是视频文件代表视频的宽高
+    iframeProps: {
+        width: string
+        height: string
+    }
+
     lang: string
     languages: Resource
 
@@ -92,6 +112,7 @@ const defaultConfig = Object.assign(
     imageConfig,
     textConfig,
     langConfig,
+    attachConfig,
     //链接校验的配置函数
     {
         linkCheck: function (text: string, link: string): string | boolean {

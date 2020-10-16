@@ -52,6 +52,7 @@ export default {
         'splitLine',
         'undo',
         'redo',
+        'attach',
     ],
 
     fontNames: [

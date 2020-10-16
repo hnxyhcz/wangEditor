@@ -26,6 +26,7 @@ import Redo from './redo/index'
 import Table from './table/index'
 import Code from './code'
 import SplitLine from './split-line/index'
+import Attach from './attach/index'
 
 export type MenuListType = {
     [key: string]: any
@@ -55,4 +56,5 @@ export default {
     table: Table,
     code: Code,
     splitLine: SplitLine,
+    attach: Attach,
 }
