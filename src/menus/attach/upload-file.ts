@@ -181,7 +181,7 @@ class UploadFile {
         })
         // 抛出验证信息
         if (errInfos.length) {
-            this.alert(`${t({ type } + '验证未通过')}: \n` + errInfos.join('\n'))
+            this.alert(`${t(`${type}验证未通过`)}: \n` + errInfos.join('\n'))
             return
         }
         if (resultFiles.length > maxLength) {
